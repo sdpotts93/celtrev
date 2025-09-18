@@ -16,44 +16,174 @@
         <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <!-- style sheets and font icons  -->
-        <link rel="stylesheet" href="css/vendors.min.css"/>
-        <link rel="stylesheet" href="css/icon.min.css"/>
-        <link rel="stylesheet" href="css/style.css"/>
-        <link rel="stylesheet" href="css/responsive.css"/>
+
+        <style>
+            h1,h6,p,ul{margin-top:0}.container,.row{--bs-gutter-x:1.5rem;--bs-gutter-y:0}.form-control,body{background-color:var(--bs-body-bg);color:var(--bs-body-color)}.btn,a{text-decoration:none}.btn,img{vertical-align:middle}.feather,button{text-transform:none}*,::after,::before{box-sizing:border-box}.form-control{-webkit-appearance:none;display:block}::file-selector-button,button{-webkit-appearance:button}:root{--bs-blue:#0d6efd;--bs-indigo:#6610f2;--bs-purple:#6f42c1;--bs-pink:#d63384;--bs-red:#dc3545;--bs-orange:#fd7e14;--bs-yellow:#ffc107;--bs-green:#198754;--bs-teal:#20c997;--bs-cyan:#0dcaf0;--bs-black:#000;--bs-white:#fff;--bs-gray:#6c757d;--bs-gray-dark:#343a40;--bs-gray-100:#f8f9fa;--bs-gray-200:#e9ecef;--bs-gray-300:#dee2e6;--bs-gray-400:#ced4da;--bs-gray-500:#adb5bd;--bs-gray-600:#6c757d;--bs-gray-700:#495057;--bs-gray-800:#343a40;--bs-gray-900:#212529;--bs-primary:#0d6efd;--bs-secondary:#6c757d;--bs-success:#198754;--bs-info:#0dcaf0;--bs-warning:#ffc107;--bs-danger:#dc3545;--bs-light:#f8f9fa;--bs-dark:#212529;--bs-primary-rgb:13,110,253;--bs-secondary-rgb:108,117,125;--bs-success-rgb:25,135,84;--bs-info-rgb:13,202,240;--bs-warning-rgb:255,193,7;--bs-danger-rgb:220,53,69;--bs-light-rgb:248,249,250;--bs-dark-rgb:33,37,41;--bs-primary-text-emphasis:#052c65;--bs-secondary-text-emphasis:#2b2f32;--bs-success-text-emphasis:#0a3622;--bs-info-text-emphasis:#055160;--bs-warning-text-emphasis:#664d03;--bs-danger-text-emphasis:#58151c;--bs-light-text-emphasis:#495057;--bs-dark-text-emphasis:#495057;--bs-primary-bg-subtle:#cfe2ff;--bs-secondary-bg-subtle:#e2e3e5;--bs-success-bg-subtle:#d1e7dd;--bs-info-bg-subtle:#cff4fc;--bs-warning-bg-subtle:#fff3cd;--bs-danger-bg-subtle:#f8d7da;--bs-light-bg-subtle:#fcfcfd;--bs-dark-bg-subtle:#ced4da;--bs-primary-border-subtle:#9ec5fe;--bs-secondary-border-subtle:#c4c8cb;--bs-success-border-subtle:#a3cfbb;--bs-info-border-subtle:#9eeaf9;--bs-warning-border-subtle:#ffe69c;--bs-danger-border-subtle:#f1aeb5;--bs-light-border-subtle:#e9ecef;--bs-dark-border-subtle:#adb5bd;--bs-white-rgb:255,255,255;--bs-black-rgb:0,0,0;--bs-font-sans-serif:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans","Liberation Sans",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";--bs-font-monospace:SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;--bs-gradient:linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));--bs-body-font-family:var(--bs-font-sans-serif);--bs-body-font-size:1rem;--bs-body-font-weight:400;--bs-body-line-height:1.5;--bs-body-color:#212529;--bs-body-color-rgb:33,37,41;--bs-body-bg:#fff;--bs-body-bg-rgb:255,255,255;--bs-emphasis-color:#000;--bs-emphasis-color-rgb:0,0,0;--bs-secondary-color:rgba(33, 37, 41, 0.75);--bs-secondary-color-rgb:33,37,41;--bs-secondary-bg:#e9ecef;--bs-secondary-bg-rgb:233,236,239;--bs-tertiary-color:rgba(33, 37, 41, 0.5);--bs-tertiary-color-rgb:33,37,41;--bs-tertiary-bg:#f8f9fa;--bs-tertiary-bg-rgb:248,249,250;--bs-heading-color:inherit;--bs-link-color:#0d6efd;--bs-link-color-rgb:13,110,253;--bs-link-decoration:underline;--bs-link-hover-color:#0a58ca;--bs-link-hover-color-rgb:10,88,202;--bs-code-color:#d63384;--bs-highlight-color:#212529;--bs-highlight-bg:#fff3cd;--bs-border-width:1px;--bs-border-style:solid;--bs-border-color:#dee2e6;--bs-border-color-translucent:rgba(0, 0, 0, 0.175);--bs-border-radius:0.375rem;--bs-border-radius-sm:0.25rem;--bs-border-radius-lg:0.5rem;--bs-border-radius-xl:1rem;--bs-border-radius-xxl:2rem;--bs-border-radius-2xl:var(--bs-border-radius-xxl);--bs-border-radius-pill:50rem;--bs-box-shadow:0 0.5rem 1rem rgba(0, 0, 0, 0.15);--bs-box-shadow-sm:0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);--bs-box-shadow-lg:0 1rem 3rem rgba(0, 0, 0, 0.175);--bs-box-shadow-inset:inset 0 1px 2px rgba(0, 0, 0, 0.075);--bs-focus-ring-width:0.25rem;--bs-focus-ring-opacity:0.25;--bs-focus-ring-color:rgba(13, 110, 253, 0.25);--bs-form-valid-color:#198754;--bs-form-valid-border-color:#198754;--bs-form-invalid-color:#dc3545;--bs-form-invalid-border-color:#dc3545;--bs-carousel-indicator-active-bg:#fff;--bs-carousel-caption-color:#fff;--bs-breakpoint-xs:0;--bs-breakpoint-sm:576px;--bs-breakpoint-md:768px;--bs-breakpoint-lg:992px;--bs-breakpoint-xl:1200px;--bs-breakpoint-xxl:1400px;--swiper-theme-color:#007aff;--swiper-navigation-size:44px;--alt-font:"Plus Jakarta Sans",sans-serif;--primary-font:"Inter",sans-serif;--base-color:#2946f3;--white:#ffffff;--black:#000000;--red:#dc3131;--light-red:#feedec;--green:#2ebb79;--crusoe-green:#d39121;--yellow:#ffea23;--dark-gray:#232323;--medium-gray:#717580;--extra-medium-gray:#e4e4e4;--light-gray:#a8a8a8;--very-light-gray:#f7f7f7;--light-medium-gray:#eaeaeb;--charcoal-blue:#202329;--slate-blue:#262b35;--medium-slate-blue:#374162;--extra-medium-slate-blue:#23262d;--dark-slate-blue:#1f232c;--extra-dark-slate-blue:#121418;--extra-very-slate-blue:#161620;--tussock-yellow:#BC8947;--aluminium-gray:#80858F;--solitude-blue:#f0f4fd;--golden-yellow:#fd961e;--selago:#eaedff;--white-ice:#d8f5ef;--cornflower-blue:#445fed;--jade:#00AF6B;--orange:#ef991f;--majorelle-blue:#724ade;--light-majorelle-blue:#f2edfe;--spring-wood:#f9f6f3;--tropical-blue:#1ea3b1;--camarone:#20642b;--seal-brown:#0e0708;--Wasabi:#8ea63a}body{margin:0;font-family:var(--bs-body-font-family);font-size:var(--bs-body-font-size);font-weight:var(--bs-body-font-weight);line-height:var(--bs-body-line-height);text-align:var(--bs-body-text-align);-webkit-text-size-adjust:100%}h1,h6{font-weight:500;color:var(--bs-heading-color)}p,ul{margin-bottom:1rem}ul{padding-left:2rem}a{color:rgba(var(--bs-link-color-rgb),var(--bs-link-opacity,1));color:var(--medium-gray)}img{max-width:100%;height:auto}button{border-radius:0}button,input{margin:0;font-family:inherit;font-size:inherit;line-height:inherit}body,html{font-size:16px}::-moz-focus-inner{padding:0;border-style:none}::-webkit-datetime-edit-day-field,::-webkit-datetime-edit-fields-wrapper,::-webkit-datetime-edit-hour-field,::-webkit-datetime-edit-minute,::-webkit-datetime-edit-month-field,::-webkit-datetime-edit-text,::-webkit-datetime-edit-year-field{padding:0}::-webkit-inner-spin-button{height:auto}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-color-swatch-wrapper{padding:0}.container,.row>*{width:100%;padding-right:calc(var(--bs-gutter-x) * .5);padding-left:calc(var(--bs-gutter-x) * .5)}::-webkit-file-upload-button{font:inherit;-webkit-appearance:button}::file-selector-button{font:inherit}.form-control{font-weight:400;line-height:1.5;-moz-appearance:none;appearance:none;background-clip:padding-box;border:var(--bs-border-width) solid var(--bs-border-color);border-radius:var(--bs-border-radius);background-position:right 20px center!important}.container{margin-right:auto;margin-left:auto}@media (min-width:576px){.container{max-width:540px}}.row{flex-wrap:wrap;display:flex;margin-top:calc(-1 * var(--bs-gutter-y));margin-right:calc(-.5 * var(--bs-gutter-x));margin-left:calc(-.5 * var(--bs-gutter-x))}.row>*{flex-shrink:0;max-width:100%;margin-top:var(--bs-gutter-y)}@media (min-width:768px){.container{max-width:720px}.col-md-12{flex:0 0 auto;width:100%}}@media (min-width:992px){.container{max-width:960px}.col-lg-10{flex:0 0 auto;width:83.33333333%}}@media (min-width:1200px){h1{font-size:2.5rem}.container{max-width:1140px}.col-xl-8{flex:0 0 auto;width:66.66666667%}}.form-control::-webkit-date-and-time-value{min-width:85px;height:1.5em;margin:0}.form-control::-webkit-datetime-edit{display:block;padding:0}.form-control::-webkit-file-upload-button{padding:.375rem .75rem;margin:-.375rem -.75rem;-webkit-margin-end:.75rem;margin-inline-end:.75rem;color:var(--bs-body-color);background-color:var(--bs-tertiary-bg);border:0 solid;border-inline-end-width:var(--bs-border-width);border-radius:0;border-color:inherit}.btn{--bs-btn-padding-x:0.75rem;--bs-btn-padding-y:0.375rem;--bs-btn-font-size:1rem;--bs-btn-font-weight:400;--bs-btn-line-height:1.5;--bs-btn-color:var(--bs-body-color);--bs-btn-bg:transparent;--bs-btn-border-width:var(--bs-border-width);--bs-btn-border-color:transparent;--bs-btn-border-radius:var(--bs-border-radius);--bs-btn-hover-border-color:transparent;--bs-btn-box-shadow:inset 0 1px 0 rgba(255, 255, 255, 0.15),0 1px 1px rgba(0, 0, 0, 0.075);--bs-btn-disabled-opacity:0.65;--bs-btn-focus-box-shadow:0 0 0 0.25rem rgba(var(--bs-btn-focus-shadow-rgb), .5);padding:var(--bs-btn-padding-y) var(--bs-btn-padding-x);font-family:var(--bs-btn-font-family);font-size:var(--bs-btn-font-size);font-weight:var(--bs-btn-font-weight);line-height:var(--bs-btn-line-height);color:var(--bs-btn-color);text-align:center;border:var(--bs-btn-border-width) solid var(--bs-btn-border-color);border-radius:var(--bs-btn-border-radius);background-color:var(--bs-btn-bg)}.fa-brands,.feather{font-style:normal;font-variant:normal;line-height:1}.align-middle{vertical-align:middle!important}.overflow-auto{overflow:auto!important}.d-inline-block{display:inline-block!important}.d-none{display:none!important}.position-relative{position:relative!important}.position-absolute{position:absolute!important}.top-0{top:0!important}.h-100{height:100%!important}.justify-content-center{justify-content:center!important}.align-items-center{align-items:center!important}.mx-auto{margin-right:auto!important;margin-left:auto!important}.mb-0{margin-bottom:0!important}.text-center{text-align:center!important}.bg-white{--bs-bg-opacity:1;background-color:rgba(var(--bs-white-rgb),var(--bs-bg-opacity))!important}button::-moz-focus-inner{padding:0;border:0}:host{position:relative;display:block;margin-left:auto;margin-right:auto;z-index:1}.fa-brands{--_fa-family:var(--fa-family, var(--fa-style-family, "Font Awesome 7 Free"));-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;display:var(--fa-display,inline-block);font-family:var(--_fa-family);font-feature-settings:normal;font-synthesis:none;font-weight:var(--fa-style,900);text-align:center;text-rendering:auto;width:auto;--fa-family:var(--fa-family-brands);--fa-style:400}.btn,.elements-social ul li,[class*=feather]{display:inline-block}.feather,body{font-weight:400;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased}.feather{font-family:feather!important;speak:none}:host,:root{--fa-family-brands:"Font Awesome 7 Brands";--fa-font-brands:normal 400 1em/1 var(--fa-family-brands);--fa-font-regular:normal 400 1em/1 var(--fa-family-classic);--fa-family-classic:"Font Awesome 7 Free";--fa-font-solid:normal 900 1em/1 var(--fa-family-classic);--fa-style-family-classic:var(--fa-family-classic)}.fa-twitter{--fa:""}.fa-linkedin-in{--fa:""}.fa-instagram{--fa:""}.fa-dribbble{--fa:""}.fa-facebook-f{--fa:""}@font-face{font-family:feather;src:url(../fonts/feather.eot?t=1525787366991);src:url(../fonts/feather.eot?t=1525787366991#iefix) format("embedded-opentype"),url(../fonts/feather.woff?t=1525787366991) format("woff"),url(../fonts/feather.ttf?t=1525787366991) format("truetype"),url(../fonts/feather.svg?t=1525787366991#feather) format("svg")}.icon-feather-mail:before{content:"\e88a"}body{font-family:var(--primary-font);line-height:30px;color:var(--medium-gray);word-break:break-word}section{padding-top:110px;padding-bottom:110px}[class*=" social-icon-"] ul,ul li{list-style:none}p{margin-bottom:25px}:focus-visible{outline:0}.container,.row>*{padding-right:15px;padding-left:15px}.row{margin-right:-15px;margin-left:-15px}h1,h6{margin-bottom:30px;letter-spacing:-.5px;font-weight:inherit}.fs-70,h1{font-size:4.375rem;line-height:4.375rem}h6{font-size:1.75rem;line-height:1.95rem}.text-transform-none{text-transform:none!important}.fs-14{font-size:14px}.fs-15{font-size:15px}.elements-social .dark li a,.text-dark-gray{color:var(--dark-gray)}.ls-0px{letter-spacing:0!important}.ls-minus-2px{letter-spacing:-2px!important}.icon-small{font-size:18px}.box-shadow-extra-large{-webkit-box-shadow:0 0 30px rgba(0,0,0,.08);box-shadow:0 0 30px rgba(0,0,0,.08)}.form-control,input{padding:12px 25px;width:100%;max-width:100%;resize:none;outline:0;font-size:16px;border:1px solid var(--extra-medium-gray);color:var(--medium-gray);line-height:inherit;word-break:normal}::-webkit-input-placeholder{color:var(--medium-gray)!important;text-overflow:ellipsis}::-moz-placeholder{color:var(--medium-gray)!important;text-overflow:ellipsis;opacity:1}:-ms-input-placeholder{color:var(--medium-gray)!important;text-overflow:ellipsis;opacity:1}.input-large{padding:16px 32px}.full-screen{height:100vh}[data-anime]{opacity:0}[data-anime].appear{opacity:1}.cover-background{background-repeat:no-repeat!important;background-size:cover;overflow:hidden;position:relative;background-position:center center!important}.border-color-transparent{border-color:transparent!important}.border-radius-5px{border-radius:5px!important}.border-radius-100px{border-radius:100px!important}.w-80{width:80%!important}.w-100{width:100%!important}@media (prefers-reduced-motion:no-preference){:root{scroll-behavior:smooth;scroll-behavior:auto}}.p-15px{padding:15px!important}.mt-15px{margin-top:15px!important}.mt-9{margin-top:9%!important}.mb-10px{margin-bottom:10px!important}.mb-8{margin-bottom:8%!important}.mb-9{margin-bottom:9%!important}.mb-10{margin-bottom:10%!important}.fw-600{font-weight:600!important}.fw-700{font-weight:700!important}.z-index-2{z-index:2}.btn{border:2px solid transparent;border-radius:0;text-transform:uppercase;letter-spacing:.5px;width:auto;font-family:var(--alt-font);font-weight:500}.btn i{position:relative;margin-left:6px}.btn.btn-extra-large{font-size:16px;padding:24px 46px}.left-icon i{margin-right:6px;margin-left:0}.countdown-style-03 .countdown-box{width:130px;display:inline-block;margin:0 15px;text-align:center}.countdown-style-03 .countdown-box .number{color:var(--dark-gray);font-size:4.3rem;line-height:4.3rem;font-family:var(--alt-font);letter-spacing:-1px;font-weight:700}.countdown-style-03 .countdown-box span{color:var(--medium-gray);text-transform:uppercase;font-size:14px;line-height:16px;font-weight:500}canvas{display:block;vertical-align:bottom}.elements-social ul{margin-bottom:0;list-style:none;padding:0}.elements-social ul li:first-child{margin-left:0!important}.elements-social ul li:last-child{margin-right:0!important}.elements-social ul li a{text-align:center;display:flex;align-items:center;justify-content:center}.medium-icon li{margin:0 8px}.medium-icon a{font-size:20px;width:50px;height:50px}.newsletter-style-03 input{padding-right:165px!important;padding-left:30px!important}.newsletter-style-03 .btn{position:absolute;right:0;top:0;border-radius:0 100px 100px 0;height:100%;padding:12px 35px 12px 30px}.newsletter-style-03 .form-control{background-image:inherit}@media (min-width:1400px){.col-xxl-7{flex:0 0 auto;width:58.33333333%}.container{max-width:1220px}}@media (max-width:1600px){section{padding-top:90px;padding-bottom:90px}}@media (max-width:1199px){.lg-w-100{width:100%!important}.lg-mb-15{margin-bottom:15%!important}}@media (max-width:991px){html{font-size:14px}section{padding-top:75px;padding-bottom:75px}.md-mb-50px{margin-bottom:50px!important}.md-mb-6{margin-bottom:6%!important}}@media (max-width:575px){.medium-icon li{margin:0 6px}}@media (max-width:767px){html{font-size:12px}section{padding-top:50px;padding-bottom:50px}h1,h6{margin-bottom:25px}.btn.btn-extra-large{font-size:15px;padding:20px 40px}.countdown-style-03 .countdown-box{width:50%;margin:0 0 30px}.elements-social ul li{margin-bottom:20px}.newsletter-style-03 input{padding-right:90px!important;padding-left:30px!important}.newsletter-style-03 .btn{padding:12px 30px}.newsletter-style-03 .btn i{margin-left:0;margin-right:0}.newsletter-style-03 .btn span{display:none}}
+        @font-face {
+            font-family: "feather";
+            src: url("./fonts/feather.eot?t=1525787366991"); /* IE9*/
+            src: url("./fonts/feather.eot?t=1525787366991#iefix") format("embedded-opentype"), url("./fonts/feather.woff?t=1525787366991") format("woff"), url("./fonts/feather.ttf?t=1525787366991") format("truetype"), url("./fonts/feather.svg?t=1525787366991#feather") format("svg"); /* iOS 4.1- */
+            }
+            .feather {
+            /* use !important to prevent issues with browser extensions that change fonts */
+            font-family: "feather" !important;
+            speak: none;
+            font-style: normal;
+            font-weight: normal;
+            font-variant: normal;
+            text-transform: none;
+            line-height: 1;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            }
+
+            .fa-solid,
+        .fa-regular,
+        .fa-brands,
+        .fa-classic,
+        .fas,
+        .far,
+        .fab,
+        .fa {
+        --_fa-family: var(--fa-family, var(--fa-style-family, "Font Awesome 7 Free"));
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        display: var(--fa-display, inline-block);
+        font-family: var(--_fa-family);
+        font-feature-settings: normal;
+        font-style: normal;
+        font-synthesis: none;
+        font-variant: normal;
+        font-weight: var(--fa-style, 900);
+        line-height: 1;
+        text-align: center;
+        text-rendering: auto;
+        width: auto;
+        }
+
+        :is(.fas,
+.far,
+.fab,
+.fa-solid,
+.fa-regular,
+.fa-brands,
+.fa-classic,
+.fa)::before {
+  content: var(--fa);
+  content: var(--fa)/"";
+}
+
+            .fa-facebook-f {
+            --fa: "";
+            }
+
+            :root, :host {
+            --fa-family-brands: "Font Awesome 7 Brands";
+            --fa-font-brands: normal 400 1em/1 var(--fa-family-brands);
+            }
+
+            @font-face {
+            font-family: "Font Awesome 7 Brands";
+            font-style: normal;
+            font-weight: 400;
+            font-display: block;
+            src: url("./fonts/fa-brands-400.woff2");
+            }
+            .fab,
+            .fa-brands,
+            .fa-classic.fa-brands {
+            --fa-family: var(--fa-family-brands);
+            --fa-style: 400;
+            }
+
+            .form-control.is-invalid, .was-validated .form-control:invalid {
+  border-color: #dc3545 !important;
+}
+.btn {
+    cursor: pointer;
+}
+.btn:hover {
+  color: var(--bs-btn-hover-color);
+  background-color: var(--bs-btn-hover-bg);
+  border-color: var(--bs-btn-hover-border-color);
+}
+.header-logo {
+    height: 80px;
+}
+.fs-70, h1 {
+    font-size: 3.075rem;
+    line-height: 3.075rem;
+}
+.mb-20px {
+    margin-bottom: 20px;
+}
+
+@media (max-width: 991px) {
+
+    h6 {
+        font-size: 16px;
+        width: 80%;
+        text-align: center;
+        margin: 0 auto;
+    }
+    .countdown-style-03 .countdown-box {
+  width: 130px;
+  display: inline-block;
+  margin: 0 15px;
+  text-align: center;
+}
+.countdown-style-03 .countdown-box .number {
+  color: var(--dark-gray);
+  font-size: 3.3rem;
+  line-height: 4rem;
+  font-family: var(--alt-font);
+  letter-spacing: -1px;
+  font-weight: 700;
+}
+.countdown-style-03 .countdown-box span {
+  color: var(--medium-gray);
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 500;
+}
+
+}
+
+
+
+        </style>
     </head>
     <body>
         <!-- start section -->  
         <section class="cover-background overflow-auto full-screen position-relative" style="background-image: url(images/coming-soon-bg.jpg);">
-            <div id="particles-style-01" class="position-absolute h-100 top-0 left-0 w-100" data-particle="true" data-particle-options='{"particles":{"number":{"value":10,"density":{"enable":true,"value_area":800}},"color":{"value":"#b0b4e2"},"shape":{"type":"circle","stroke":{"width":0,"color":"#000000"},"polygon":{"nb_sides":5},"image":{"src":"img/github.svg","width":100,"height":100}},"opacity":{"value":1,"random":false,"anim":{"enable":false,"speed":1,"opacity_min":0.1,"sync":false}},"size":{"value":4,"random":true,"anim":{"enable":false,"speed":40,"size_min":0.1,"sync":false}},"line_linked":{"enable":false,"distance":150,"color":"#ffffff","opacity":0.4,"width":1},"move":{"enable":true,"speed":6,"direction":"none","random":false,"straight":false,"out_mode":"out","bounce":false,"attract":{"enable":false,"rotateX":600,"rotateY":1200}}},"interactivity":{"detect_on":"canvas","events":{"onhover":{"enable":true,"mode":"repulse"},"onclick":{"enable":true,"mode":"push"},"resize":true},"modes":{"grab":{"distance":400,"line_linked":{"opacity":1}},"bubble":{"distance":400,"size":40,"duration":2,"opacity":8,"speed":3},"repulse":{"distance":200,"duration":0.4},"push":{"particles_nb":4},"remove":{"particles_nb":2}}},"retina_detect":true}'></div>
+            <div id="particles-style-01" class="position-absolute h-100 top-0 left-0 w-100" data-particle="true" data-particle-options='{"particles":{"number":{"value":10,"density":{"enable":true,"value_area":800}},"color":{"value":"#49d4ff"},"shape":{"type":"circle","stroke":{"width":0,"color":"#000000"},"polygon":{"nb_sides":5},"image":{"src":"img/github.svg","width":100,"height":100}},"opacity":{"value":1,"random":false,"anim":{"enable":false,"speed":1,"opacity_min":0.1,"sync":false}},"size":{"value":4,"random":true,"anim":{"enable":false,"speed":40,"size_min":0.1,"sync":false}},"line_linked":{"enable":false,"distance":150,"color":"#ffffff","opacity":0.4,"width":1},"move":{"enable":true,"speed":6,"direction":"none","random":false,"straight":false,"out_mode":"out","bounce":false,"attract":{"enable":false,"rotateX":600,"rotateY":1200}}},"interactivity":{"detect_on":"canvas","events":{"onhover":{"enable":true,"mode":"repulse"},"onclick":{"enable":true,"mode":"push"},"resize":true},"modes":{"grab":{"distance":400,"line_linked":{"opacity":1}},"bubble":{"distance":400,"size":40,"duration":2,"opacity":8,"speed":3},"repulse":{"distance":200,"duration":0.4},"push":{"particles_nb":4},"remove":{"particles_nb":2}}},"retina_detect":true}'></div>
             <div class="container h-100">
                 <div class="row align-items-center justify-content-center h-100 z-index-2 position-relative">
                     <div class="col-md-12 col-lg-10 col-xl-8 col-xxl-7 text-center" data-anime='{ "el": "childs", "translateY": [50, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
-                        <a class="mb-10 md-mb-50px d-inline-block" href="index.html"> 
-                            <img src="images/logo-black-big.png" data-at2x="images/logo-black-big@2x.png" alt="">
+                        <a class="mb-20px d-inline-block" href="index.html"> 
+                            <img class="header-logo" src="images/celtrev-logo.png" data-at2x="images/celtrev-logo.png" alt="">
                         </a>
                         <h1 class="fw-700 fs-70 mb-10px text-dark-gray ls-minus-2px">Coming soon!</h1>
-                        <h6 class="text-dark-gray mb-0">We're getting ready to launch!</h6>
+                        <h6 class="text-dark-gray mt-15px mb-0">¡Estamos preparando una mejor experiencia para ti!</h6>
                         <div class="countdown-style-03 mb-9 mt-9">
-                            <div data-enddate="2026/08/08 12:00:00" class="countdown"></div>
+                            <div data-enddate="2025/10/22 12:00:00" class="countdown"></div>
                         </div>
-                        <div class="d-inline-block w-100 newsletter-style-03 position-relative mb-8 lg-mb-15 md-mb-6">
+                        <div class="d-inline-block w-100 newsletter-style-03 position-relative mb-8 md-mb-6">
                             <form action="email-templates/subscribe-newsletter.php" method="post" class="position-relative lg-w-100 w-80 mx-auto">
                                 <div class="position-relative">
-                                    <input class="input-large bg-white border-color-transparent w-100 border-radius-5px box-shadow-extra-large form-control required" type="email" name="email" placeholder="Enter your email address" />
+                                    <input class="input-large bg-white border-color-transparent w-100 border-radius-5px box-shadow-extra-large form-control required" type="email" name="email" placeholder="Escribe tu correo" />
                                     <input type="hidden" name="redirect" value="">
-                                    <button class="btn btn-extra-large text-dark-gray ls-0px left-icon submit text-transform-none fw-600" aria-label="submit"><i class="icon feather icon-feather-mail icon-small align-middle"></i><span>Notify me</span></button>
+                                    <button class="btn btn-extra-large text-dark-gray ls-0px left-icon submit text-transform-none fw-600" aria-label="submit"><i class="icon feather icon-feather-mail icon-small align-middle"></i><span>Notifícame</span></button>
                                 </div>
                                 <div class="form-results border-radius-100px mt-15px p-15px fs-15 w-100 text-center d-none"></div>
                             </form> 
-                            <p class="fs-14 mt-15px mb-0">Subscribe our newsletter to get update when it'll be live.</p>
+                            <p class="fs-14 mt-15px mb-0">Suscríbete para recibir un correo cuando lancemos.</p>
                         </div>
                         <div class="elements-social social-icon-style-08">
                             <ul class="medium-icon dark">
-                                <li class="mb-0"><a class="facebook" href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a></li>
-                                <li class="mb-0"><a class="dribbble" href="http://www.dribbble.com" target="_blank"><i class="fa-brands fa-dribbble"></i></a></li>
-                                <li class="mb-0"><a class="twitter" href="http://www.twitter.com" target="_blank"><i class="fa-brands fa-twitter"></i></a></li>
-                                <li class="mb-0"><a class="instagram" href="http://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
-                                <li class="mb-0"><a class="linkedin" href="http://www.linkedin.com" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                                <li class="mb-0"><a class="instagram" href="https://www.instagram.com/celtrevaudiovisual" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+                                <li class="mb-0"><a class="linkedin" href="https://www.linkedin.com/company/celtrev-audiovisual/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a></li>
                             </ul>
                         </div>
                     </div>

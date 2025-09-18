@@ -1213,9 +1213,9 @@
         $('.countdown').each(function () {
             var _this = $(this);
             _this.countdown(_this.attr("data-enddate")).on('update.countdown', function (event) {
-                _this.html(event.strftime('' + '<div class="counter-container"><div class="countdown-box first"><div class="number">%-D</div><span>Days</span></div>' + '<div class="countdown-box"><div class="number">%H</div><span>Hours</span></div>' + '<div class="countdown-box"><div class="number">%M</div><span>Minutes</span></div>' + '<div class="countdown-box last"><div class="number">%S</div><span>Seconds</span></div></div>'));
+                _this.html(event.strftime('' + '<div class="counter-container"><div class="countdown-box first"><div class="number">%-D</div><span>Días</span></div>' + '<div class="countdown-box"><div class="number">%H</div><span>Horas</span></div>' + '<div class="countdown-box"><div class="number">%M</div><span>Minutos</span></div>' + '<div class="countdown-box last"><div class="number">%S</div><span>Segundos</span></div></div>'));
             }).on('finish.countdown', function (event) {
-                _this.html(event.strftime('' + '<div class="counter-container"><div class="countdown-box first" data-number="00"><div class="number">00</div><span>Days</span></div>' + '<div class="countdown-box"><div class="number">00</div><span>Hours</span></div>' + '<div class="countdown-box"><div class="number">00</div><span>Minutes</span></div>' + '<div class="countdown-box last"><div class="number">00</div><span>Seconds</span></div></div>'));
+                _this.html(event.strftime('' + '<div class="counter-container"><div class="countdown-box first" data-number="00"><div class="number">00</div><span>Días</span></div>' + '<div class="countdown-box"><div class="number">00</div><span>Horas</span></div>' + '<div class="countdown-box"><div class="number">00</div><span>Minutos</span></div>' + '<div class="countdown-box last"><div class="number">00</div><span>Segundos</span></div></div>'));
             });
         });
     }
